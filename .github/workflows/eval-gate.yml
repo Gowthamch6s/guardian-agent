@@ -15,7 +15,7 @@ name: Eval Gate
 
 on:
   pull_request:
-    branches: [main]
+    branches: [master]
   workflow_dispatch: {}
 
 env:
