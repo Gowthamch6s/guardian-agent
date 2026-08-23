@@ -1,3 +1,13 @@
+---
+title: Guardian Ops Agent
+emoji: 🛡️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Guardian — Guardrailed & Continuously-Evaluated Banking Ops Agent
 
 Guardian is a LangGraph support/ops assistant for a fictional bank ("Meridian
