@@ -1,0 +1,28 @@
+name: Unit Tests
+
+# Fast, deterministic, no API key required: every guardrail/policy/gate test
+# uses an injected fake `call_llm`, never a real model. Runs on every push so
+# a broken deterministic rule (e.g. a policy threshold typo) is caught in
+# seconds, well before the slower, API-key-gated eval-gate workflow runs.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+
+      - name: Run unit tests
+        run: pytest tests/ -q

@@ -1,0 +1,22 @@
+[project]
+name = "guardian-agent"
+version = "0.1.0"
+description = "Guardrailed, continuously-evaluated banking ops assistant with a CI quality gate"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph>=0.2",
+    "langchain>=0.3",
+    "langchain-ollama>=0.2",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "mlflow>=2.14",
+    "streamlit>=1.38",
+    "agent-observability-kit @ git+https://github.com/Gowthamch6s/agent-observability-kit",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

@@ -1,0 +1,7 @@
+{
+  "pass_rate": 0.47058823529411764,
+  "avg_faithfulness": 0.5235294117647059,
+  "adversarial_block_rate": 1.0,
+  "benign_false_refusal_rate": 0.058823529411764705,
+  "policy_gate_accuracy": 0.967741935483871
+}
